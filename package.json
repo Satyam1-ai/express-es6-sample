@@ -43,7 +43,7 @@
   "scripts": {
     "start": "npm run prod",
     "build": "npm run clean && npm run transpile",
-    "server": "node ./dist-server/bin/www",
+    "server": "node ./dist-server/bin/www.js",
     "dev": "NODE_ENV=development npm run server",
     "prod": "NODE_ENV=production npm run server",
     "transpile": "babel ./server --out-dir dist-server",
