@@ -1,21 +1,16 @@
 version: 0.2
-
 phases:
   install:
     commands:
-      - echo Installing dependencies
       - npm install
-  pre_build:
-    commands:
-      - echo Starting pre-build phase
   build:
     commands:
-      - echo Building the project
-      - npm run build  # or npm run transpile if using babel
-  post_build:
-    commands:
-      - echo Build complete
-
+      - npm run build
 artifacts:
   files:
-    - dist-server/**/*  # Include all built files in dist-server
+    - dist-server/**/*
+    - public/**/*
+    - node_modules/**/*
+    - package.json
+    - Procfile
+
